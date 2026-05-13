@@ -1,0 +1,5 @@
+SecurityEvent
+| where EventID == 4698
+| parse_xml(EventData)
+| extend TaskName = tostring(EventData.Data[0].["#text"])
+| project TimeGenerated, Computer, TaskName, SubjectUserName
