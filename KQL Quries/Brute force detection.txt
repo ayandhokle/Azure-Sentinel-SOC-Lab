@@ -1,0 +1,4 @@
+SecurityEvent
+| where EventID == 4625
+| summarize Count=count() by TargetAccount, IpAddress, bin(TimeGenerated, 10m)
+| where Count > 5
