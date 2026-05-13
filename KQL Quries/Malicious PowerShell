@@ -1,0 +1,4 @@
+SecurityEvent
+| where ProcessName contains "powershell.exe"
+| where CommandLine contains "-EncodedCommand"
+| project TimeGenerated, Computer, User=Account, Command=CommandLine
