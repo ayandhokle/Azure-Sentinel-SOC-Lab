@@ -1,4 +1,4 @@
-# 🛡️ AI-Assisted Threat Detection & Triage using Microsoft Sentinel
+# 🛡️ Azure-Sentinel-SOC-Lab
 
 ![Azure](https://img.shields.io/badge/Azure-Microsoft%20Sentinel-0078D4?style=flat&logo=microsoftazure)
 ![KQL](https://img.shields.io/badge/Query-KQL-FF6F00?style=flat)
