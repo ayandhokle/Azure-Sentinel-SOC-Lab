@@ -7,8 +7,6 @@
 
 A cloud-native SOC home lab built on **Microsoft Sentinel** to simulate real-world attack scenarios, detect threats using AI/ML-powered analytics, hunt threats with KQL, and automate incident response using Logic Apps (SOAR).
 
-This lab bridges the gap between traditional on-prem SIEM tools (Wazuh, Splunk) and modern cloud-native AI-assisted SOC operations.
-
 ---
 
 ## 📌 Objectives
@@ -19,7 +17,6 @@ This lab bridges the gap between traditional on-prem SIEM tools (Wazuh, Splunk) 
 - Detect threats using built-in ML Fusion rules and UEBA (User and Entity Behavior Analytics)
 - Write custom KQL hunting queries for proactive threat detection
 - Automate incident response notifications using Logic Apps playbook
-- Use Microsoft Copilot for Security to summarize and triage incidents
 
 ---
 
@@ -31,10 +28,8 @@ This lab bridges the gap between traditional on-prem SIEM tools (Wazuh, Splunk) 
 | Azure Log Analytics Workspace | Log ingestion and storage |
 | Azure Windows 10 VM | Target/victim machine |
 | KQL (Kusto Query Language) | Threat hunting queries |
-| Fusion ML Rules | AI-powered multi-signal correlation |
 | UEBA | User and Entity Behavior Analytics |
 | Logic Apps | SOAR playbook automation |
-| Copilot for Security | AI-assisted incident triage |
 | Kali Linux (local) | Attack simulation |
 
 ---
@@ -61,22 +56,9 @@ This lab bridges the gap between traditional on-prem SIEM tools (Wazuh, Splunk) 
 
 ---
 
-### Phase 3 — AI-Powered Detection
-
-**Fusion ML Rule** — Correlated failed logins + scheduled task creation into a single High severity incident flagged as Credential Access → Persistence attack chain.
-
-**UEBA** — Flagged anomalous login times and new scheduled tasks outside baseline behavior automatically.
-
-**Custom KQL Hunting Queries** — 4 queries written. See `/kql-queries/`.
-
-
----
-
-### Phase 4 — SOAR Automation & AI Triage
+### Phase 3 — SOAR Automation
 
 **Logic Apps Playbook** — Trigger: High severity incident → Action: Send email with incident details.
-
-**Copilot for Security** — Used to generate natural language incident summary, identify affected entities, and suggest remediation steps.
 
 ---
 
@@ -87,7 +69,6 @@ This lab bridges the gap between traditional on-prem SIEM tools (Wazuh, Splunk) 
 | Custom KQL — RDP Brute-force | ✅ Yes | High |
 | Custom KQL — Scheduled Task | ✅ Yes | Medium |
 | Custom KQL — Encoded PowerShell | ✅ Yes | Medium |
-| Fusion ML Rule | ✅ Yes — correlated brute-force + persistence | High |
 | UEBA Anomaly | ✅ Yes — behavioral baseline deviation | Medium |
 
 ---
@@ -124,7 +105,6 @@ SecurityEvent
 
 ## 💡 Lessons Learned
 
-- Fusion ML correlated two medium-severity alerts into one high-severity incident — a pattern static rules miss without complex correlation logic
 - UEBA flagged anomalies without hardcoded thresholds
 - KQL is more readable than SPL and closer to SQL
 - Cloud SIEM scales automatically — no storage or indexing management
@@ -148,8 +128,6 @@ SecurityEvent
 **Ayan Dhokle**  
 GitHub: [github.com/ayandhokle](https://github.com/ayandhokle)  
 LinkedIn: [linkedin.com/in/ayandhokle](https://linkedin.com/in/ayandhokle)  
-CompTIA Security+ (SY0-701) | CompTIA Network+
+CompTIA Security+ | CompTIA Network+
 
 ---
-
-> ⚠️ **Disclaimer:** This lab is built purely for educational purposes in a controlled environment. All attack simulations were performed on personal infrastructure.
