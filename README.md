@@ -3,7 +3,7 @@
 ![Azure](https://img.shields.io/badge/Azure-Microsoft%20Sentinel-0078D4?style=flat&logo=microsoftazure)
 ![KQL](https://img.shields.io/badge/Query-KQL-FF6F00?style=flat)
 ![SOAR](https://img.shields.io/badge/Automation-Logic%20Apps-0089D6?style=flat&logo=microsoftazure)
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow?style=flat)
+
 
 A cloud-native SOC home lab built on **Microsoft Sentinel** to simulate real-world attack scenarios, detect threats using AI/ML-powered analytics, hunt threats with KQL, and automate incident response using Logic Apps (SOAR).
 
